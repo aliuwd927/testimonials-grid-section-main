@@ -6,14 +6,147 @@
 
 html,
 body {
-  min-height: 100vh;
+  height: 100%;
   max-width: 100vw;
+  background-color: #f2f2f2;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  display: grid;
+  place-items: center;
+  padding: 15px;
 }
+
 .wrapper {
   height: 100%;
   width: 100%;
+  display: grid;
+  /* grid-template-areas:
+    "section section section "
+    "section section section";
+ */
+  grid-template-areas:
+    "t1 t1 t2 t5"
+    "t3 t4 t4 t5";
+  grid-gap: 2rem;
 }
-@media screen and (min-width: 320px) and (max-width: 768px) {
+
+/* Flex Items */
+h1 {
+  text-align: center;
+}
+.student {
+  display: flex;
+  flex-direction: row;
+  padding: 1rem;
+}
+.student--name {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1rem;
+}
+.profile-pic {
+  display: flex;
+  justify-content: center;
+}
+.profile-pic.prof__con {
+  border: solid #a775f1;
+  border-radius: 50%;
+}
+.prof--image {
+  border-radius: 50%;
+}
+
+/* Section Testimonial */
+.testimonial {
+  border-radius: 10px;
+}
+/* Daniel Clifford */
+.testimonal--1 {
+  grid-area: t1;
+  background-image: url("/images/bg-pattern-quotation.svg");
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-color: #733fc8;
+  stroke: #a775f1;
+}
+
+/* Jonathan Walter */
+.testimonal--2 {
+  grid-area: t2;
+  background-color: #48556a;
+  stroke: #979797;
+}
+
+.text--Color1 {
+  color: #ffffff;
+}
+/* Jeanette Harmon */
+.testimonal--3 {
+  grid-area: t3;
+  background-color: #ffffff;
+  stroke: #979797;
+}
+.text--Color2 {
+  color: #48556a;
+}
+/* Patrick Abrams */
+.testimonal--4 {
+  grid-area: t4;
+  background-color: #19202d;
+  stroke: #979797;
+}
+.text--Color3 {
+  color: #ecf2f8;
+}
+/* Kira Whittle */
+.testimonal--5 {
+  grid-area: t5;
+  background-color: #ffffff;
+  stroke: #979797;
+}
+/* End Student Testimonial */
+
+/* Student Paragraph Section */
+.para--text.para1 {
+  color: #cfcfcf;
+  opacity: 70%;
+}
+
+.para--text.para2 {
+  color: #ffffff;
+  opacity: 70%;
+}
+
+.para--text.para3 {
+  color: #48556a;
+  opacity: 70%;
+}
+.para--text.para4 {
+  color: #ecf2f8;
+  opacity: 70%;
+}
+.para--text.para5 {
+  color: #48556a;
+  opacity: 70%;
+}
+
+/* P Containers --Student Name P / Student Verified --*/
+.student--name--p1,
+.student--verified1 {
+  color: #ffffff;
+}
+.student--name--p2,
+.student--verified2 {
+  color: #48556a;
+}
+.student--verified2 {
+  opacity: 2;
+}
+.student--verified1 {
+  opacity: 70%;
+}
+
+/* Media Query */
+@media screen and (min-width: 280px) and (max-width: 768px) {
   .wrapper {
     display: flex;
     align-items: center;
@@ -23,18 +156,38 @@ body {
   .student {
     display: flex;
     flex-direction: row;
-    border: solid black;
+    align-items: flex-start;
+    justify-content: flex-start;
   }
   .student--name {
+    display: flex;
     flex-direction: column;
+    padding: 15px;
     text-align: start;
-    border: solid black;
   }
+  .profile-pic.prof__con {
+    display: flex;
+    justify-content: center;
+    border: solid #a775f1;
+    border-radius: 30px;
+  }
+  .prof--image {
+    height: 100%;
+    border-radius: 30px;
+  }
+
   .testimonial {
+    display: flex;
+    flex-direction: column;
     width: 327px;
     padding: 25px;
     text-align: center;
     gap: 15px;
-    border: solid black;
+    border-radius: 10px;
+  }
+
+  .testimonial.testimonal--1 {
+    /* Learned something new */
+    background-origin: content-box;
   }
 }
