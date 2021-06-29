@@ -31,7 +31,9 @@ body {
 
 /* Flex Items */
 h1 {
-  text-align: center;
+  font-weight: 600;
+  font-size: 1.25rem;
+  text-align: left;
 }
 .student {
   display: flex;
@@ -57,6 +59,7 @@ h1 {
 
 /* Section Testimonial */
 .testimonial {
+  padding: 32px;
   border-radius: 10px;
 }
 /* Daniel Clifford */
@@ -64,8 +67,10 @@ h1 {
   grid-area: t1;
   background-image: url("/images/bg-pattern-quotation.svg");
   background-repeat: no-repeat;
-  background-position: top right;
+  background-position: top -0.5rem right 4rem;
+  background-origin: content-box;
   background-color: #733fc8;
+  background-size: 20% 40%;
   stroke: #a775f1;
 }
 
@@ -106,6 +111,9 @@ h1 {
 /* End Student Testimonial */
 
 /* Student Paragraph Section */
+.para--text{
+  margin-top: 1rem;
+}
 .para--text.para1 {
   color: #cfcfcf;
   opacity: 70%;
@@ -188,6 +196,12 @@ h1 {
 
   .testimonial.testimonal--1 {
     /* Learned something new */
-    background-origin: content-box;
+  background-image: url("/images/bg-pattern-quotation.svg");
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-origin: content-box;
+  background-color: #733fc8;
+  background-size: 40% 30%;
+  background-origin: content-box;
   }
 }
